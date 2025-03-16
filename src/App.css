@@ -1,8 +1,26 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  width: 100%;
+}
+
+.main {
+  display: grid;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+  overflow: hidden;
+}
+.main--details-hidden {
+  max-width: 300px;
+  grid-template-columns: 1fr;
+}
+.main--details-visible {
+  max-width: 600px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .logo {
@@ -39,4 +57,58 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.featured {
+  background: #ccc;
+  color: #000;
+  text-align: left;
+  padding: 1rem;
+  box-shadow: 0 0 10px 0 #222;
+}
+.featured > *:first-child {
+  margin-top: 0;
+}
+.featured > h2:first-of-type {
+  margin-top: 0;
+}
+.featured > *:last-child {
+  margin-bottom: 0;
+}
+
+.left-nav__link {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.left-nav__link:not(.left-nav__link--active):hover {
+  background: #666;
+}
+.left-nav__link--active {
+  background: #999;
+  color: #222;
+}
+
+.featured ul {
+  margin-left: 0;
+  padding-left: 18px;
+}
+
+.featured h2 {
+  line-height: 1.25;
+}
+.button-close {
+  position: absolute;
+
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  right: 0.5rem;
+  top: 0.5rem;
 }
