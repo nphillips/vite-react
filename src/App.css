@@ -3,6 +3,10 @@
   padding: 2rem;
   width: 100%;
 }
+body {
+  background: #222;
+  color: #ccc;
+}
 
 .main {
   display: grid;
